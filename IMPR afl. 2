@@ -2,42 +2,45 @@
 #include  <string.h>
 
 int    main(void){
-int seconds,hour,min,sec,status = 1; 		// først initialiseres alle de nødvendige variabler
-while (status == 1){
-	
-	printf("Give me a number in seconds: \n");  
-	scanf("%i",&seconds); 		// den indtastede værdi bliver tildelt variablen
-	hour = seconds / 3600; 		// antaltimer udregnes 
-	min = seconds % 3600 / 60; 	// der udregnes et antal min
-	sec = seconds % 3600 % 60; 	// der udregnes en rest af beløbet i sekunder 
-    
-	if (hour == 0){
-        char hour_c[] = "";
-    }else if(hour == 1){
-        char hour_c[] = "1 hour";
-    }else{
-        char hour_c[] = hour + "hours";
-    }
-    
-    if (min == 0){
-        char min_c[] = "";
-    }else if(hour == 1){
-        char min_c[] = "1 minute";
-    }else{
-        char min_c[] = min + "minutes";
-    }
-    
-    if (sec == 0){
-        char sec_c[] = "";
-    }else if(sec == 1){
-        char sec_c[] = "1 second";
-    }else{
-        char sec_c[] = sec + "seconds";
-    }
-    
-    
-    printf("The result: %s %s %s\n",hour_c,min_c,sec_c);  	
-status = 0;
+int seconds,hour,min,sec;   // først initialiseres alle de nødvendige variabler
+char hour_char[50] = "",min_char[50] = "",sec_char[50] = "";
+
+printf("Give me a number in seconds: \n");  
+scanf("%i",&seconds);       // den indtastede værdi bliver tildelt variablen
+if(seconds)
+hour = seconds / 3600;      // antaltimer udregnes 
+min = seconds % 3600 / 60;  // der udregnes et antal min
+sec = seconds % 3600 % 60;  // der udregnes en rest af beløbet i sekunder
+if (hour == 0){
+  ;
+}else if(hour == 1){
+  strcat(hour_char, "1 hour");
+}else{
+  char str[50] = "";
+  itoa(hour, str, 10);
+  strcat(hour_char, str);
+  strcat(hour_char, " hours");
+}
+if (min == 0){
+  ;
+}else if(min == 1){
+  strcat(min_char, "1 minute");
+}else{
+  char str[50] = "";
+  itoa(min, str, 10);
+  strcat(min_char, str);
+  strcat(min_char, " minutes");
+}
+if (sec == 0){
+  ;
+}else if(sec == 1){
+  strcat(sec_char, "1 second");
+}else{
+  char str[50] = "";
+  itoa(sec, str, 10);
+  strcat(sec_char, str);
+  strcat(sec_char, " seconds");
 }	
+printf("The result: %s %s %s\n",hour_char,min_char,sec_char);  
 return 0;
 }
