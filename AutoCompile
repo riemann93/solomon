@@ -6,4 +6,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 InputBox, VarName, Name input, Hvilket program?
 
 f1::Run, *RunAs %comspec% /c C:\MinGW\msys\1.0\msys.bat, c:\ 
-f2::Send, gcc %VarName%.c {ENTER} a {ENTER}
+f2::Send, gcc %VarName%.c {ENTER}  
+f3::Send, a {ENTER}
