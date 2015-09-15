@@ -2,26 +2,27 @@
 #include  <string.h>
 
 int    main(void){
-int seconds,hour,min,sec;   // først initialiseres alle de nødvendige variabler
-char hour_char[50] = "",min_char[50] = "",sec_char[50] = "";
-
+system("cls");
+int status = 1;
+while(status == 1){
+int seconds,hour,min,sec;       // først initialiseres alle de nødvendige variabler
+char hour_char[50] = "",min_char[50] = "",sec_char[50] = "",again[10] = "";
 printf("Give me a number in seconds: \n");  
-scanf("%i",&seconds);       // den indtastede værdi bliver tildelt variablen
-if(seconds)
-hour = seconds / 3600;      // antaltimer udregnes 
-min = seconds % 3600 / 60;  // der udregnes et antal min
-sec = seconds % 3600 % 60;  // der udregnes en rest af beløbet i sekunder
-if (hour == 0){
+scanf("%i",&seconds);           // den indtastede værdi bliver tildelt variablen seconds
+hour = seconds / 3600;          // antaltimer udregnes 
+min = seconds % 3600 / 60;      // der udregnes et antal min
+sec = seconds % 3600 % 60;      // der udregnes en rest af beløbet i sekunder
+if (hour == 0){                 // hvis der ingen timer er, skal der ikke laves en "hour" string. 
   ;
-}else if(hour == 1){
+}else if(hour == 1){            // hour stringen skal altid være "1 hour" hvis der er 1 time.
   strcat(hour_char, "1 hour");
-}else{
-  char str[50] = "";
-  itoa(hour, str, 10);
-  strcat(hour_char, str);
-  strcat(hour_char, " hours");
+}else{                          // ellers skal stringen være antallet af timer + " hours"
+  char str[50] = "";            // først initieres den midlertidige string str
+  itoa(hour, str, 10);          // int variablen hour laves om til en string med funktionen 'itoa'
+  strcat(hour_char, str);       // stringen tilføjes til hour_char
+  strcat(hour_char, " hours");  // stringen " hours" bliver sat efter antal timer.
 }
-if (min == 0){
+if (min == 0){                  //samme fremgangsmåde for minutter og sekunder
   ;
 }else if(min == 1){
   strcat(min_char, "1 minute");
@@ -41,6 +42,29 @@ if (sec == 0){
   strcat(sec_char, str);
   strcat(sec_char, " seconds");
 }	
-printf("The result: %s %s %s\n",hour_char,min_char,sec_char);  
+printf("The result is: %s%s%s%s%s\n",                                                     // timer, minutter, sekunder printes
+hour_char,                                                                                // stringen der indeholder timer
+hour > 0 && min > 0 && sec > 0 ? ", " : hour > 0 && min > 0 && sec == 0 ? " and " : "",   // angiver om der skal " and ", ", " eller ingenting imellem timer og minuter
+min_char,                                                                                 // stringen der indeholder timer
+min > 0 && sec > 0 ? " and " : hour > 0 && sec > 0 ? " and " : "",                        // angiver om der skal " and ", ", " eller ingenting imellem timer og minuter
+sec_char);                                                                                // stringen der indeholder minutter
+
+printf("\ndo you want to try again? write \"yes\" or \"no\"\n");                          //den næste del af koden sprøger om programmet skal starte forfra, eller afslutte.
+scanf("%s",&again);
+if(strcmp(again,"no") == 0){                                                              //afslutter programmet
+  system("cls");
+  printf("The program is terminated");
+  status = 0;
+  break;
+}else if(strcmp(again,"yes") == 0){                                                       // lader while løkken starte forfra
+  system("cls");
+  printf("Program has restarted!\n");
+}else{                                                                                    // afslutter, hvis ikke der blev angivet "yes" eller "no"
+  system("cls");
+  printf("Invalid characters. Terminating aaplication\n");
+  status = 0;
+  break;
+}
+}
 return 0;
 }
