@@ -1,0 +1,6 @@
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\bin\Debug\Eksamen2017.exe.config
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\bin\Debug\Eksamen2017.exe
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\bin\Debug\Eksamen2017.pdb
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\obj\Debug\Eksamen2017.csprojResolveAssemblyReference.cache
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\obj\Debug\Eksamen2017.exe
+C:\Users\Steffan\Desktop\OOP--2017\solomon\OOP-Exam-2017\Eksamen2017\Eksamen2017\obj\Debug\Eksamen2017.pdb
