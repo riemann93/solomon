@@ -1,0 +1,6 @@
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\bin\Debug\TestRepo.exe.config
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\bin\Debug\TestRepo.exe
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\bin\Debug\TestRepo.pdb
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\obj\Debug\TestRepo.csprojResolveAssemblyReference.cache
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\obj\Debug\TestRepo.exe
+C:\Users\Steffan\Desktop\new--repo\solomon\TestRepo\TestRepo\obj\Debug\TestRepo.pdb
