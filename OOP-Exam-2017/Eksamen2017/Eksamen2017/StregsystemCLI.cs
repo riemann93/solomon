@@ -14,7 +14,7 @@ namespace Eksamen2017
             this.stregsystem = stregsystem;
         }
 
-        private void update() {
+        private void Start() {
             while (active == true) {
                 Console.Clear();
                 drawMenu();
@@ -34,10 +34,6 @@ namespace Eksamen2017
             string s = Console.ReadLine();
             Console.WriteLine("you said: " + s + "\n");
             Console.ReadKey();
-        }
-
-        public void Start() {
-            update();
         }
     }
 }
