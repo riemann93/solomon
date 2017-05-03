@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Eksamen2017 {
     class StregsystemController {
 
-        private StregsystemCLI stregsystemUI;
-        private Stregsystem stregsystem;
+        public IStregsystemUI stregsystemUI;
+        public Stregsystem stregsystem;
 
-        public StregsystemController(StregsystemCLI stregsystemUI, Stregsystem stregsystem) {
+        public StregsystemController(Stregsystem stregsystem, IStregsystemUI stregsystemUI) {
             this.stregsystemUI = stregsystemUI;
             this.stregsystem = stregsystem;
         }

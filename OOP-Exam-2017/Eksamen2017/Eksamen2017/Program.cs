@@ -10,10 +10,10 @@ namespace Eksamen2017
         static void Main(string[] args) {
 
             Stregsystem stregsystem = new Stregsystem();
-            StregsystemCLI ui = new StregsystemCLI(stregsystem);
+            IStregsystemUI ui = new StregsystemCLI(stregsystem);
+            StregsystemController sc = new StregsystemController(stregsystem, ui);
 
             ui.Start();
-
         }
     }
 }
