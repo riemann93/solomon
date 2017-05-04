@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuyTransaction.cs" />
+    <Compile Include="InsertCashTransaction.cs" />
+    <Compile Include="InsufficientCreditException.cs" />
+    <Compile Include="IStregsystem.cs" />
     <Compile Include="IStregsystemUI.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,6 +55,7 @@
     <Compile Include="Stregsystem.cs" />
     <Compile Include="StregsystemCLI.cs" />
     <Compile Include="StregsystemController.cs" />
+    <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

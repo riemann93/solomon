@@ -18,7 +18,7 @@ namespace Eksamen2017 {
 
         public SeasonalProduct(int productID, string name, int price, bool active, bool canBeBoughtOnCredit, DateTime seasonalStartDate, DateTime seasonalEndDate) 
             : base(productID, name, price, active, canBeBoughtOnCredit) {
-            this.SeasonalStartDate = seasonalStartDate;
+            this.seasonalStartDate = seasonalStartDate;
             this.seasonalEndDate = seasonalEndDate;
         }
     }

@@ -8,9 +8,9 @@ namespace Eksamen2017 {
     class StregsystemController {
 
         public IStregsystemUI stregsystemUI;
-        public Stregsystem stregsystem;
+        public IStregsystem stregsystem;
 
-        public StregsystemController(Stregsystem stregsystem, IStregsystemUI stregsystemUI) {
+        public StregsystemController(IStregsystem stregsystem, IStregsystemUI stregsystemUI) {
             this.stregsystemUI = stregsystemUI;
             this.stregsystem = stregsystem;
         }

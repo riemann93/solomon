@@ -17,7 +17,7 @@ namespace Eksamen2017
             set { active = value; } }
         public bool CanBeBoughtOnCredit {
             get { return canBeBoughtOnCredit; }
-            set { canBeBoughtOnCredit = value } }
+            set { canBeBoughtOnCredit = value; } }
 
         private int productID;
         private string name;
